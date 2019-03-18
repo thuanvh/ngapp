@@ -1,0 +1,68 @@
+<button (click)="goBack()" class="btn">go back</button>
+
+<div class="">
+<div *ngIf="hero" class="col-md-3 col-xs-3 col-lg-3 col-sm-3 " style="height:80vh;overflow-y:scroll;">
+  <div class="list-group">
+    <a target="#" *ngFor="let item of hero.content; let i = index" (click)="onSelect(item)" class="list-group-item">
+      <b>{{item.id}}</b>  *  <b>{{item.content[0]}}</b> - <span>{{item.content[2]}}</span>
+    </a>
+  </div>
+</div>
+
+<div *ngIf="selectedItem" class="col-md-9 col-xs-9 col-lg-9 col-sm-9" style="height:80vh;overflow-y:scroll;">
+  <!-- <div *ngFor="let s of selectedItem.content">
+    {{s}}
+  </div> -->
+  <div>
+    <h3>{{selectedItem.content[0]}}</h3>
+    <div>Sound: {{selectedItem.content[1]}}</div>
+    <div>Meaning: {{selectedItem.content[3]}}</div>
+    <!--4-sound-->
+    <div>Type: {{selectedItem.content[5]}}</div>
+    <div>Sample:</div>
+    <div>{{selectedItem.content[6]}}</div>
+    <div>{{selectedItem.content[7]}}</div>
+    <div >abc {{selectedItem.content[8] | formatString: { "[sound:": '111' } }}</div><!--Sound kanji-->
+    <div>{{selectedItem.content[9]}}</div><!--Sound hiragana-->
+    <div>{{selectedItem.content[10]}}</div><!--Meaning-->
+    <div>{{selectedItem.content[11]}}</div><!--(...)-->
+    <!-- <div> {{selectedItem.content[12]  | formatString: { "[sound:": 'Sound', "]" : "" } }}</div>Sound -->
+    <!-- <img src={{selectedItem.content[13]  | formatString: { '[img:': '', ']' : '' } }}/>
+    <img src="./assets/{{formatString(selectedItem.content[13] , { '[img:': '', ']' : '' } )}}"/> -->
+    <!--14: Core 2000 01 - --1, 15: 1, 16: 1, 17: 56-->
+  </div>
+  <div>
+    <button (click)="getListKj()" class="btn">Kanji</button>
+    <div *ngIf="kjList" >
+      <h5>kanji list</h5>
+      <div *ngFor="let kj of kjList" class="panel">
+        <div class="panel-body">
+        <div class="col-md-1 col-xs-1 col-lg-1 col-sm-1">
+          <h2>{{kj.kj}}</h2>
+        </div>
+        <div class="col-md-11 col-xs-11 col-lg-11 col-sm-11">
+        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+            <div>{{kj.detail.hanviet}}</div>
+            <div>{{kj.detail.keyword}}</div>
+            
+          
+          <!-- <div>{{kj.detail.kanji}}</div> -->
+          
+          <div>{{kj.detail.kunYomi}}</div>
+          <div>{{kj.detail.onYomi}}</div>
+        </div>
+        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
+            <div>{{kj.detail.constituent}}</div>
+          <div>{{kj.detail.myStory}}</div>
+          
+          <div>{{kj.detail.readingExamples}}</div>
+          <div>{{kj.detail.strokeDiagram}}</div>
+          <!-- <div>{{kj.detail.words: string[][]; -->
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
