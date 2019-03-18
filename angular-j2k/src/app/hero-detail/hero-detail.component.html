@@ -1,5 +1,5 @@
 <button (click)="goBack()" class="btn">go back</button>
-
+<button (click)="autoPlayAudio()" class="btn">Auto play audio</button>
 <div class="">
 <div *ngIf="hero" class="col-md-3 col-xs-3 col-lg-3 col-sm-3 " style="height:80vh;overflow-y:scroll;">
   <div class="list-group">
@@ -10,25 +10,35 @@
 </div>
 
 <div *ngIf="selectedItem" class="col-md-9 col-xs-9 col-lg-9 col-sm-9" style="height:80vh;overflow-y:scroll;">
-  <!-- <div *ngFor="let s of selectedItem.content">
+   <!-- <div *ngFor="let s of selectedItem.content">
     {{s}}
-  </div> -->
+  </div>  -->
   <div>
     <h3>{{selectedItem.content[0]}}</h3>
-    <div>Sound: {{selectedItem.content[1]}}</div>
+    <div>Sound: {{selectedItem.content[1]}}<button (click)="playAudio(selectedItem.content[4])">Play item</button></div>
     <div>Meaning: {{selectedItem.content[3]}}</div>
     <!--4-sound-->
+    
     <div>Type: {{selectedItem.content[5]}}</div>
-    <div>Sample:</div>
+    <div>Sample:<button (click)="playAudio(selectedItem.content[12])"> Play sentence
+        <!-- {{selectedItem.content[12]  | formatString: { '[sound:': '', ']' : '' } }} -->
+      </button></div>
     <div>{{selectedItem.content[6]}}</div>
-    <div>{{selectedItem.content[7]}}</div>
-    <div >abc {{selectedItem.content[8] | formatString: { "[sound:": '111' } }}</div><!--Sound kanji-->
-    <div>{{selectedItem.content[9]}}</div><!--Sound hiragana-->
+    <h3 [innerHTML]=selectedItem.content[7]></h3>
+    <div [innerHTML]=selectedItem.content[8]></div>
+    <div [innerHTML]=selectedItem.content[9]></div>
+    <!-- <div>{{selectedItem.content[7] | formatString: { '&lt;b&gt;': '', '&lt;/b&gt;' : '' } }}</div>
+    <div>{{selectedItem.content[8] | formatString: { '&lt;b&gt;': '', '&lt;/b&gt;' : '' } }}</div> -->
+    <!-- <button (click)="playAudio(selectedItem.content[8])">Play{{selectedItem.content[8]}}</button> -->
+    <!--Sound kanji-->
+    <!-- <div>{{selectedItem.content[9] | formatString: { '&lt;b&gt;': '', '&lt;/b&gt;' : '' } }}</div> -->
+    <!--Sound hiragana-->
     <div>{{selectedItem.content[10]}}</div><!--Meaning-->
-    <div>{{selectedItem.content[11]}}</div><!--(...)-->
-    <!-- <div> {{selectedItem.content[12]  | formatString: { "[sound:": 'Sound', "]" : "" } }}</div>Sound -->
-    <!-- <img src={{selectedItem.content[13]  | formatString: { '[img:': '', ']' : '' } }}/>
-    <img src="./assets/{{formatString(selectedItem.content[13] , { '[img:': '', ']' : '' } )}}"/> -->
+    <div [innerHTML]=selectedItem.content[11]></div><!--(...)-->
+    
+    <!-- <img src={{selectedItem.content[13]  | formatString: { '[img:': '', ']' : '' } }}/> -->
+    <!-- <img src="https://thuanvh.github.io/j2ks/media/ffa5ad589fe3a9c1d2543915545d8f29.jpg"/> -->
+    <img [src]=selectedItem.content[13] width="100" height="100"/>
     <!--14: Core 2000 01 - --1, 15: 1, 16: 1, 17: 56-->
   </div>
   <div>

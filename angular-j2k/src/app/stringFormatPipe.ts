@@ -3,7 +3,7 @@ import {Pipe, PipeTransform} from "@angular/core";
 
 @Pipe({name: "formatString"})
 export class FormatStringPipe implements PipeTransform {
-    transform(value: string, args?: any[]): string {
+    transform(value: string, args: {[key: string]: string}): string {
       
         // For each argument
 
