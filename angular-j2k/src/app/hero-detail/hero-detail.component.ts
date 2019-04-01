@@ -116,9 +116,9 @@ export class HeroDetailComponent implements OnInit {
     }
     
     autoPlayAudio() {
-      const source = timer(1000, 3000);
+      const source = timer(1000, 5000);
       let i = 0;
-      let max=5;
+      let max=10;
       const abc = source.subscribe(val => {
         console.log(val, '-');
         //this.subscribeTimer = this.timeLeft - val;
@@ -126,12 +126,12 @@ export class HeroDetailComponent implements OnInit {
         if(i == 0){
           // switch selectedItem
           this.getNextItem();
-        }else if(i==1){
+        }else if(i==1 || i==2){
           this.playAudio(this.selectedItem.content[4]);
-        }else if(i==2){
+        }else if(i < max){
           this.playAudio(this.selectedItem.content[12]);
         }
-        if (i>3)
+        if (i>max)
           i=-1;
       });
     }
