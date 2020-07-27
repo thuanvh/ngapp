@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "HelloCordova",
-  "short_name": "HelloCordova",
+  "name": "JaSen",
+  "short_name": "JaSen",
   "version": "io.cordova.hellocordova",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "description": "A sample JaSen application that responds to the deviceready event.",
+  "author": "JaSen Team",
   "icons": [],
   "start_url": "index.html"
 }
