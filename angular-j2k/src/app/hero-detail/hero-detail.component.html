@@ -1,26 +1,45 @@
-<button (click)="goBack()" class="btn">go back</button>
-<button (click)="autoPlayAudio()" class="btn">Auto play audio</button>
-<div class="">
-<div *ngIf="hero" class="col-md-3 col-xs-3 col-lg-3 col-sm-3 " style="height:80vh;overflow-y:scroll;">
+<button mat-raised-button color="primary" (click)="goBack()" class="btn">Go back</button>
+<button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn">Auto play audio</button>
+<!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
+
+
+<!-- <div *ngIf="hero" class="col-md-3 col-xs-3 col-lg-3 col-sm-3 " style="height:80vh;overflow-y:scroll;">
   <div class="list-group">
     <a target="#" *ngFor="let item of hero.content; let i = index" (click)="onSelect(item)" class="list-group-item">
       <b>{{item.id}}</b>  *  <b>{{item.content[0]}}</b> - <span>{{item.content[2]}}</span>
     </a>
   </div>
-</div>
+</div> -->
+<mat-sidenav-container class="example-container" >
+  <mat-sidenav mode="side" opened>
 
-<div *ngIf="selectedItem" class="col-md-9 col-xs-9 col-lg-9 col-sm-9" style="height:80vh;overflow-y:scroll;">
+<mat-nav-list>
+  <mat-list-item *ngFor="let item of hero.content; let i = index">
+    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">info</mat-icon> -->
+    <a mat-line  (click)="onSelect(item)" >
+      <b>{{item.id}}</b>  *  <b>{{item.content[0]}}</b> - <span>{{item.content[2]}}</span>
+    </a>
+     <!-- <button mat-icon-button (click)="onSelect(item)">
+        <mat-icon>info</mat-icon>
+     </button> -->
+  </mat-list-item>
+</mat-nav-list>
+
+</mat-sidenav>
+<mat-sidenav-content>
+
+<div *ngIf="selectedItem" >
    <!-- <div *ngFor="let s of selectedItem.content">
     {{s}}
   </div>  -->
   <div>
     <h3>{{selectedItem.id}} - {{selectedItem.content[0]}}</h3>
-    <div>Sound: {{selectedItem.content[1]}}<button (click)="playAudio(selectedItem.content[4])">Play item</button></div>
+    <div>Sound: {{selectedItem.content[1]}} <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])">Play item</button></div>
     <div>Meaning: {{selectedItem.content[3]}}</div>
     <!--4-sound-->
     
     <div>Type: {{selectedItem.content[5]}}</div>
-    <div>Sample:<button (click)="playAudio(selectedItem.content[12])"> Play sentence
+    <div>Sample: <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])"> Play sentence
         <!-- {{selectedItem.content[12]  | formatString: { '[sound:': '', ']' : '' } }} -->
       </button></div>
     <div>{{selectedItem.content[6]}}</div>
@@ -42,37 +61,40 @@
     <!--14: Core 2000 01 - --1, 15: 1, 16: 1, 17: 56-->
   </div>
   <div>
-    <button (click)="getListKj()" class="btn">Kanji</button>
+    <button mat-raised-button color="accent" (click)="getListKj()" class="btn">Kanji</button>
     <div *ngIf="kjList" >
-      <h5>kanji list</h5>
-      <div *ngFor="let kj of kjList" class="panel">
-        <div class="panel-body">
-        <div class="col-md-1 col-xs-1 col-lg-1 col-sm-1">
-          <h2>{{kj.kj}}</h2>
-        </div>
-        <div class="col-md-11 col-xs-11 col-lg-11 col-sm-11">
-        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-            <div>{{kj.detail.hanviet}}</div>
-            <div>{{kj.detail.keyword}}</div>
-            
+      <h5>Kanji list</h5>
+      <mat-list>
+        <mat-list-item *ngFor="let kj of kjList">
+          <!-- <div mat-subheader>{{kj.kj}}</div> -->
+
+              <h2 matLine>{{kj.kj}}</h2>
           
-          <!-- <div>{{kj.detail.kanji}}</div> -->
+              <!-- <mat-divider [vertical]="true"></mat-divider> -->
+
           
-          <div>{{kj.detail.kunYomi}}</div>
-          <div>{{kj.detail.onYomi}}</div>
-        </div>
-        <div class="col-md-6 col-xs-6 col-lg-6 col-sm-6">
-            <div>{{kj.detail.constituent}}</div>
-          <div>{{kj.detail.myStory}}</div>
+                <div matLine>{{kj.detail.hanviet}}</div>
+                <div matLine>{{kj.detail.keyword}}</div>
+                
+              
+              <!-- <div>{{kj.detail.kanji}}</div> -->
+              
+              <div matLine>{{kj.detail.kunYomi}}</div>
+              <div matLine>{{kj.detail.onYomi}}</div>
           
-          <div>{{kj.detail.readingExamples}}</div>
-          <div>{{kj.detail.strokeDiagram}}</div>
-          <!-- <div>{{kj.detail.words: string[][]; -->
-        </div>
-        </div>
-      </div>
-      </div>
+            <!-- <mat-divider [vertical]="true"></mat-divider> -->
+
+          
+            <div matLine>{{kj.detail.constituent}}</div>
+            <div matLine>{{kj.detail.myStory}}</div>
+            <div matLine>{{kj.detail.readingExamples}}</div>
+            <div matLine>{{kj.detail.strokeDiagram}}</div>
+          
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
     </div>
   </div>
 </div>
-</div>
+</mat-sidenav-content>
+</mat-sidenav-container>

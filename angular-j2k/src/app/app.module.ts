@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +19,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 import { FormatStringPipe } from './stringFormatPipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,12 +38,18 @@ import { FormatStringPipe } from './stringFormatPipe';
 
     HttpClientModule,
 
+    BrowserAnimationsModule,
+
     // // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // // and returns simulated server responses.
     // // Remove it when a real server is ready to receive requests.
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false }
     // )
+    MatButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
