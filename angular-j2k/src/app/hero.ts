@@ -9,7 +9,8 @@ export class Sentence{
 }
 export class Kj{
   kj: string;
-  detail: KjDetail;  
+  detail: KjDetail;
+  kjstrokegif: string;
 }
 export class KjDetail{
   constituent: string;

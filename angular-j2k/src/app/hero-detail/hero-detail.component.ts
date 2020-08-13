@@ -25,6 +25,15 @@ export class HeroDetailComponent implements OnInit {
     this.selectedItem = item;
     this.getListKj();
   }
+
+  selectNext():void{
+    this.getNextItem();
+  }
+
+  selectPrev():void{
+    this.getPrevItem();
+  }
+
   kjList: Kj[];
   getListKj():void{
     this.kjList = new Array();
@@ -40,13 +49,14 @@ export class HeroDetailComponent implements OnInit {
               break;
             }
           if(!existed)
-            this.kjList.push({kj:element[i], detail:null});
+            this.kjList.push({kj:element[i], detail:null, kjstrokegif:null});
         }
       }
     });
     this.kjList.forEach(kj => {
       this.heroService.getKjDetail(kj.kj).subscribe(kjdetail=>{
         kj.detail = kjdetail;
+        kj.kjstrokegif = "https://thuanvh.github.io/kanji-frequency/media_gif/" + kjdetail.strokeDiagram.substring(0,kjdetail.strokeDiagram.length-3)+"gif"
       });
     });
   }
@@ -104,6 +114,16 @@ export class HeroDetailComponent implements OnInit {
         if(nextIdx >= this.hero.content.length)
           nextIdx = 0;
         this.onSelect(this.hero.content[nextIdx]);
+        //this.selectedItem = this.hero.content[nextIdx];
+      }
+    }
+    getPrevItem():void{
+      if(this.hero.content.length > 0){
+        let itemIdx = this.selectedItem.id - 1 - (this.hero.id-1)*100;
+        let prevIdx = itemIdx - 1;
+        if(prevIdx < 0)
+          prevIdx = this.hero.content.length - 1;
+        this.onSelect(this.hero.content[prevIdx]);
         //this.selectedItem = this.hero.content[nextIdx];
       }
     }

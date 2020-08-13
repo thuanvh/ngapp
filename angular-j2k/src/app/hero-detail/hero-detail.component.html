@@ -1,5 +1,9 @@
 <button mat-raised-button color="primary" (click)="goBack()" class="btn">Go back</button>
 <button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn">Auto play audio</button>
+<button mat-raised-button (click)="drawer.toggle()">List</button>
+<button mat-raised-button (click)="selectPrev()">Prev</button>
+<button mat-raised-button (click)="selectNext()">Next</button>
+
 <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
 
 
@@ -11,12 +15,12 @@
   </div>
 </div> -->
 <mat-sidenav-container class="example-container" >
-  <mat-sidenav mode="side" opened>
+  <mat-sidenav mode="side" #drawer opened>
 
 <mat-nav-list>
   <mat-list-item *ngFor="let item of hero.content; let i = index">
     <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">info</mat-icon> -->
-    <a mat-line  (click)="onSelect(item)" >
+    <a mat-line  (click)="onSelect(item);drawer.toggle();" >
       <b>{{item.id}}</b>  *  <b>{{item.content[0]}}</b> - <span>{{item.content[2]}}</span>
     </a>
      <!-- <button mat-icon-button (click)="onSelect(item)">
@@ -73,7 +77,7 @@
               <!-- <mat-divider [vertical]="true"></mat-divider> -->
 
           
-                <div matLine>{{kj.detail.hanviet}}</div>
+                
                 <div matLine>{{kj.detail.keyword}}</div>
                 
               
@@ -86,12 +90,14 @@
 
           
             <div matLine>{{kj.detail.constituent}}</div>
-            <div matLine>{{kj.detail.myStory}}</div>
+            <!-- <div matLine>{{kj.detail.myStory}}</div> -->
             <div matLine>{{kj.detail.readingExamples}}</div>
-            <div matLine>{{kj.detail.strokeDiagram}}</div>
-          
+            <!-- <div matLine>{{kj.detail.strokeDiagram}}</div> -->
+            <div matLine>{{kj.detail.hanviet}}</div>
+            <img [src]=kj.kjstrokegif width="100" height="100"/>
+            <mat-divider></mat-divider>
         </mat-list-item>
-        <mat-divider></mat-divider>
+        
       </mat-list>
     </div>
   </div>
