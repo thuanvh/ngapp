@@ -9,10 +9,20 @@
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "vi": {
+            "translation": "src/locale/messages.vi.xlf",
+            "baseHref": "" 
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/j2k",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -51,6 +61,10 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "vi": {
+              "localize": true,
+              "baseHref": "" 
             }
           }
         },
@@ -62,6 +76,9 @@
           "configurations": {
             "production": {
               "browserTarget": "j2k:build:production"
+            },
+            "vi": {
+              "browserTarget": "j2k:build:vi"
             }
           }
         },

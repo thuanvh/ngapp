@@ -1,8 +1,8 @@
-<button mat-raised-button color="primary" (click)="goBack()" class="btn">Go back</button>
-<button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn">Auto play audio</button>
-<button mat-raised-button (click)="drawer.toggle()">List</button>
-<button mat-raised-button (click)="selectPrev()">Prev</button>
-<button mat-raised-button (click)="selectNext()">Next</button>
+<button mat-raised-button color="primary" (click)="goBack()" class="btn" i18n>Go back</button>
+<button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn" i18n>Auto play audio</button>
+<button mat-raised-button (click)="drawer.toggle()" i18n>List</button>
+<button mat-raised-button (click)="selectPrev()" i18n>Prev</button>
+<button mat-raised-button (click)="selectNext()" i18n>Next</button>
 
 <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
 
@@ -38,12 +38,12 @@
   </div>  -->
   <div>
     <h3>{{selectedItem.id}} - {{selectedItem.content[0]}}</h3>
-    <div>Sound: {{selectedItem.content[1]}} <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])">Play item</button></div>
-    <div>Meaning: {{selectedItem.content[3]}}</div>
+    <div><b i18n>Sound:</b> {{selectedItem.content[1]}} <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])"  i18n>Play item</button></div>
+    <div><b i18n>Meaning:</b> {{selectedItem.content[3]}}</div>
     <!--4-sound-->
     
-    <div>Type: {{selectedItem.content[5]}}</div>
-    <div>Sample: <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])"> Play sentence
+    <div><b i18n>Type:</b> {{selectedItem.content[5]}}</div>
+    <div><b i18n>Sample:</b> <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])" i18n> Play sentence
         <!-- {{selectedItem.content[12]  | formatString: { '[sound:': '', ']' : '' } }} -->
       </button></div>
     <div>{{selectedItem.content[6]}}</div>
@@ -65,9 +65,9 @@
     <!--14: Core 2000 01 - --1, 15: 1, 16: 1, 17: 56-->
   </div>
   <div>
-    <button mat-raised-button color="accent" (click)="getListKj()" class="btn">Kanji</button>
+    <button mat-raised-button color="accent" (click)="getListKj()" class="btn" i18n>Kanji</button>
     <div *ngIf="kjList" >
-      <h5>Kanji list</h5>
+      <h5 i18n>Kanji list</h5>
       <mat-list>
         <mat-list-item *ngFor="let kj of kjList">
           <!-- <div mat-subheader>{{kj.kj}}</div> -->

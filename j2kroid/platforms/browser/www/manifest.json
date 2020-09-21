@@ -3,7 +3,7 @@
   "display": "standalone",
   "name": "JaSen",
   "short_name": "JaSen",
-  "version": "io.cordova.hellocordova",
+  "version": "com.arko.jasen",
   "description": "A sample JaSen application that responds to the deviceready event.",
   "author": "JaSen Team",
   "icons": [],
