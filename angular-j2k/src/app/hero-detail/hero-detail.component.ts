@@ -70,6 +70,12 @@ export class HeroDetailComponent implements OnInit {
     audio.load();
     audio.play();
   }
+  playAudioMeaning(id):void{
+    this.playAudio('[sound:local/vi/meaning/' + id + ".mp3");
+  }
+  playAudioSentence(id):void{
+    this.playAudio('[sound:local/vi/sentence/' + id + ".mp3");
+  }
   replacetext(value: string, args: {[key: string]: string}): string {
       
     // For each argument

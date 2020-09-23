@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ee2f09b4d9e653ece8be08fea2c186506f6be03a" datatype="html">
+        <source>Listen 2000 japanese sentence</source>
+        <target>Nghe 2000 câu tiếng nhật</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source>
+        <target>Toàn bộ</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f227deaaab3e9b2d6b6007d96feb7ec7b3240aa9" datatype="html">
+        <source>Sentences List</source>
+        <target>Danh sách câu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a67aec1c4d47cdf3a4442a19e616def78fd77388" datatype="html">
+        <source>Go back</source>
+        <target>Trở lại</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aeef4dbd010ac2090f4d22f85fd3b5f18d433349" datatype="html">
+        <source>Auto play audio</source>
+        <target>Tự động chơi âm thanh</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6490b3960cc7c4a789cdbd29575d93abad081e07" datatype="html">
+        <source>List</source>
+        <target>Danh sách</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c2375280c2228be7eb5fc89446188193eb20f03b" datatype="html">
+        <source>Prev</source>
+        <target>Trước</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f732c304c7433e5a83ffcd862c3dce709a0f4982" datatype="html">
+        <source>Next</source>
+        <target>Tiếp tục</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7b86809751402fc8b86f5a64a2cdcad19068d988" datatype="html">
+        <source>Sound:</source>
+        <target>Âm thanh:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="98eee28c64c7c2ba3334c705784fc29065cd22ec" datatype="html">
+        <source>Play item</source>
+        <target>Chơi</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6d88d27951769174d6b0bde4480e28a0ef437901" datatype="html">
+        <source>Meaning:</source>
+        <target>Nghĩa:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b9bbc52ec4aca768d771d9673f93ded62a984de9" datatype="html">
+        <source>Play meaning</source>
+        <target>Nghe nghĩa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e78c0d60ac39787f62c9159646fe0b3c1ed55a1d" datatype="html">
+        <source>Type:</source>
+        <target>Loại:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ee48d5cc053e5c43ef89e413aff6fb35543fe033" datatype="html">
+        <source>Sample:</source>
+        <target>Ví dụ:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8a122c888f29d9e9e87c9115e17bf718eeb38822" datatype="html">
+        <source> Play sentence</source>
+        <target>Âm thanh cả câu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="94153a582621a0d23d4230acab7cb0fd810a38d1" datatype="html">
+        <source>Play meaning sentence</source>
+        <target>Nghe nghĩa của câu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b2e351d8b73630ecae234f07fa8befcfc01e4d5a" datatype="html">
+        <source>Kanji</source>
+        <target>Hán tự</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7f5c37572db7c4988bf6816d44149f7cb98a10b9" datatype="html">
+        <source>Kanji list</source>
+        <target>Danh sách hán tự</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-detail/hero-detail.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ea965d544a7dfd8185064c52cdfff553cf94d585" datatype="html">
+        <source>Messages</source>
+        <target>Tin nhắn</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/messages/messages.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="608c2c2fd57206f39026b5f6226c5ba25a91495e" datatype="html">
+        <source>clear</source>
+        <target>Xóa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/messages/messages.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f681163113cceebf3e24cf71db6d7155872f7cd9" datatype="html">
+        <source>Top Sentence List</source>
+        <target>Danh sách câu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="375b65407848d68e5f00c3293f804e77911cefe5" datatype="html">
+        <source>Sentence Search</source>
+        <target>Tìm câu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/hero-search/hero-search.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
