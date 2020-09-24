@@ -3,8 +3,8 @@
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="ee2f09b4d9e653ece8be08fea2c186506f6be03a" datatype="html">
-        <source>Listen 2000 japanese sentence</source>
-        <target>Nghe 2000 câu tiếng nhật</target>
+        <source>Listen 6000 japanese sentence</source>
+        <target>Nghe 6000 câu tiếng Nhật</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.html</context>
           <context context-type="linenumber">1</context>

@@ -65,16 +65,19 @@ export class HeroDetailComponent implements OnInit {
     let file = new FormatStringPipe().transform(audiofile, {"[sound:":"","]":""});
     file = "https://thuanvh.github.io/j2ks/media/" + file;
     //this.messageService.add(`HeroService: ${file}`);
+    this.playFile(file);
+  }
+  playFile(file):void{
     let audio = new Audio();
     audio.src = file;//"../../../assets/sounds/button_1.mp3";
     audio.load();
     audio.play();
   }
   playAudioMeaning(id):void{
-    this.playAudio('[sound:local/vi/meaning/' + id + ".mp3");
+    this.playFile('https://thuanvh.github.io/j2ks/local/vi/meaning/' + id + ".mp3");
   }
   playAudioSentence(id):void{
-    this.playAudio('[sound:local/vi/sentence/' + id + ".mp3");
+    this.playFile('https://thuanvh.github.io/j2ks/local/vi/sentence/' + id + ".mp3");
   }
   replacetext(value: string, args: {[key: string]: string}): string {
       
@@ -154,8 +157,12 @@ export class HeroDetailComponent implements OnInit {
           this.getNextItem();
         }else if(i==1 || i==2){
           this.playAudio(this.selectedItem.content[4]);
-        }else if(i < max){
+        }else if(i==3){
+          this.playAudioMeaning(this.selectedItem.id);
+        }else if(i==4 || i==5){
           this.playAudio(this.selectedItem.content[12]);
+        }else if(i==6){
+          this.playAudioSentence(this.selectedItem.id);
         }
         if (i>max)
           i=-1;

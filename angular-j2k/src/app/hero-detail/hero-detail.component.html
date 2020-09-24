@@ -1,8 +1,13 @@
-<button mat-raised-button color="primary" (click)="goBack()" class="btn" i18n>Go back</button>
-<button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn" i18n>Auto play audio</button>
-<button mat-raised-button (click)="drawer.toggle()" i18n>List</button>
-<button mat-raised-button (click)="selectPrev()" i18n>Prev</button>
-<button mat-raised-button (click)="selectNext()" i18n>Next</button>
+<button mat-raised-button color="primary" (click)="goBack()" class="btn" i18n>
+  <mat-icon>arrow_back</mat-icon>Go back</button>
+<!-- <button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn" i18n>Auto play audio</button> -->
+<button mat-raised-button color="primary" aria-label="play">
+  <mat-icon>play_circle_filled</mat-icon> Auto play audio
+</button>
+<br/>
+<button mat-raised-button (click)="drawer.toggle()" i18n><mat-icon>menu</mat-icon>List</button>
+<button mat-raised-button (click)="selectPrev()" i18n><mat-icon>skip_previous</mat-icon>Prev</button>
+<button mat-raised-button (click)="selectNext()" i18n><mat-icon>skip_next</mat-icon>Next</button>
 
 <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
 
@@ -38,16 +43,30 @@
   </div>  -->
   <div>
     <h3>{{selectedItem.id}} - {{selectedItem.content[0]}}</h3>
-    <div><b i18n>Sound:</b> {{selectedItem.content[1]}} <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])"  i18n>Play item</button></div>
-    <div><b i18n>Meaning:</b> {{selectedItem.content[3]}}<button mat-raised-button color="accent" (click)="playAudioMeaning(selectedItem.id)" i18n>Play meaning</button></div>
+    <div><b i18n>Sound:</b> {{selectedItem.content[1]}} 
+      <!-- <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])"  i18n>Play item</button> -->
+      <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])" aria-label="play">
+        <mat-icon>play_circle_filled</mat-icon> Play
+      </button>
+    </div>
+    <div><b i18n>Meaning:</b> {{selectedItem.content[3]}}
+      <!-- <button mat-raised-button color="accent" (click)="playAudioMeaning(selectedItem.id)" i18n>Play meaning</button> -->
+      <button mat-raised-button color="accent" (click)="playAudioMeaning(selectedItem.id)" aria-label="play">
+        <mat-icon>play_circle_filled</mat-icon> Play 
+      </button>
+    </div>
     <!--4-sound-->
     
     <div><b i18n>Type:</b> {{selectedItem.content[5]}}</div>
-    <div><b i18n>Sample:</b> <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])" i18n> Play sentence
-        <!-- {{selectedItem.content[12]  | formatString: { '[sound:': '', ']' : '' } }} -->
-      </button></div>
+    <div><b i18n>Sample:</b> 
+      <!-- <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])" i18n> Play sentence</button> -->
+      <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])" aria-label="play">
+        <mat-icon>play_circle_filled</mat-icon> Play 
+      </button>      
+    </div>
     <div>{{selectedItem.content[6]}}</div>
     <h3 [innerHTML]=selectedItem.content[7]></h3>
+
     <div [innerHTML]=selectedItem.content[8]></div>
     <div [innerHTML]=selectedItem.content[9]></div>
     <!-- <div>{{selectedItem.content[7] | formatString: { '&lt;b&gt;': '', '&lt;/b&gt;' : '' } }}</div>
@@ -56,7 +75,12 @@
     <!--Sound kanji-->
     <!-- <div>{{selectedItem.content[9] | formatString: { '&lt;b&gt;': '', '&lt;/b&gt;' : '' } }}</div> -->
     <!--Sound hiragana-->
-    <div>{{selectedItem.content[10]}}<button mat-raised-button color="accent" (click)="playAudioSentence(selectedItem.id)" i18n>Play meaning sentence</button></div><!--Meaning-->
+    <div>{{selectedItem.content[10]}}
+      <!-- <button mat-raised-button color="accent" (click)="playAudioSentence(selectedItem.id)" i18n>Play meaning sentence</button> -->
+      <button mat-raised-button color="accent" (click)="playAudioSentence(selectedItem.id)" aria-label="play">
+        <mat-icon>play_circle_filled</mat-icon> Play 
+      </button>
+    </div><!--Meaning-->
     <div [innerHTML]=selectedItem.content[11]></div><!--(...)-->
     
     <!-- <img src={{selectedItem.content[13]  | formatString: { '[img:': '', ']' : '' } }}/> -->
