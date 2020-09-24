@@ -13,7 +13,8 @@
         "sourceLocale": "en-US",
         "locales": {
           "vi": {
-            "translation": "src/locale/messages.vi.xlf"
+            "translation": "src/locale/messages.vi.xlf",
+            "baseHref": ""
           }
         }
       },
@@ -62,7 +63,8 @@
               ]
             },
             "vi": {
-              "localize": ["vi"]
+              "localize": ["vi"],
+              "baseHref": ""
             }
           }
         },

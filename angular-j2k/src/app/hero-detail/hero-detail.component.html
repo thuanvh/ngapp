@@ -1,13 +1,13 @@
-<button mat-raised-button color="primary" (click)="goBack()" class="btn" i18n>
-  <mat-icon>arrow_back</mat-icon>Go back</button>
+<button mat-raised-button color="primary" (click)="goBack()" class="btn" >
+  <mat-icon>arrow_back</mat-icon><span i18n>Go back</span></button>
 <!-- <button mat-raised-button color="primary" (click)="autoPlayAudio()" class="btn" i18n>Auto play audio</button> -->
 <button mat-raised-button color="primary" aria-label="play">
-  <mat-icon>play_circle_filled</mat-icon> Auto play audio
+  <mat-icon>play_circle_filled</mat-icon> <span i18n>Auto play audio</span>
 </button>
 <br/>
-<button mat-raised-button (click)="drawer.toggle()" i18n><mat-icon>menu</mat-icon>List</button>
-<button mat-raised-button (click)="selectPrev()" i18n><mat-icon>skip_previous</mat-icon>Prev</button>
-<button mat-raised-button (click)="selectNext()" i18n><mat-icon>skip_next</mat-icon>Next</button>
+<button mat-raised-button (click)="drawer.toggle()" ><mat-icon>menu</mat-icon><span i18n>List</span></button>
+<button mat-raised-button (click)="selectPrev()" ><mat-icon>skip_previous</mat-icon><span i18n>Prev</span></button>
+<button mat-raised-button (click)="selectNext()" ><mat-icon>skip_next</mat-icon><span i18n>Next</span></button>
 
 <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
 
@@ -46,13 +46,13 @@
     <div><b i18n>Sound:</b> {{selectedItem.content[1]}} 
       <!-- <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])"  i18n>Play item</button> -->
       <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[4])" aria-label="play">
-        <mat-icon>play_circle_filled</mat-icon> Play
+        <mat-icon>play_circle_filled</mat-icon> <span i18n>Play</span>
       </button>
     </div>
     <div><b i18n>Meaning:</b> {{selectedItem.content[3]}}
       <!-- <button mat-raised-button color="accent" (click)="playAudioMeaning(selectedItem.id)" i18n>Play meaning</button> -->
       <button mat-raised-button color="accent" (click)="playAudioMeaning(selectedItem.id)" aria-label="play">
-        <mat-icon>play_circle_filled</mat-icon> Play 
+        <mat-icon>play_circle_filled</mat-icon> <span i18n>Play</span> 
       </button>
     </div>
     <!--4-sound-->
@@ -61,7 +61,7 @@
     <div><b i18n>Sample:</b> 
       <!-- <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])" i18n> Play sentence</button> -->
       <button mat-raised-button color="accent" (click)="playAudio(selectedItem.content[12])" aria-label="play">
-        <mat-icon>play_circle_filled</mat-icon> Play 
+        <mat-icon>play_circle_filled</mat-icon> <span i18n>Play</span> 
       </button>      
     </div>
     <div>{{selectedItem.content[6]}}</div>
@@ -78,7 +78,7 @@
     <div>{{selectedItem.content[10]}}
       <!-- <button mat-raised-button color="accent" (click)="playAudioSentence(selectedItem.id)" i18n>Play meaning sentence</button> -->
       <button mat-raised-button color="accent" (click)="playAudioSentence(selectedItem.id)" aria-label="play">
-        <mat-icon>play_circle_filled</mat-icon> Play 
+        <mat-icon>play_circle_filled</mat-icon> <span i18n>Play</span> 
       </button>
     </div><!--Meaning-->
     <div [innerHTML]=selectedItem.content[11]></div><!--(...)-->
