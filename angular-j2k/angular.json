@@ -8,21 +8,11 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "vi": {
-            "translation": "src/locale/messages.vi.xlf",
-            "baseHref": ""
-          }
-        }
-      },
+      "schematics": {},      
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": true,
             "outputPath": "dist/j2k",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -63,8 +53,12 @@
               ]
             },
             "vi": {
-              "localize": ["vi"],
-              "baseHref": ""
+              "aot": true,
+              "outputPath": "dist/",
+              "i18nFile": "src/locale/messages.vi.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "vi",
+              "i18nMissingTranslation": "error"
             }
           }
         },

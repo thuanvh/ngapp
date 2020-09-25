@@ -9,11 +9,24 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "io.cordova.hellocordova"
+    },
+    "cordova-plugin-adcolony": {
+      "PACKAGE_NAME": "com.arko.jasen"
     }
   },
   "dependent_plugins": {},
-  "modules": [],
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-adcolony/www/AdColony.js",
+      "id": "cordova-plugin-adcolony.AdColony",
+      "pluginId": "cordova-plugin-adcolony",
+      "clobbers": [
+        "window.AdColony"
+      ]
+    }
+  ],
   "plugin_metadata": {
-    "cordova-plugin-whitelist": "1.3.4"
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-plugin-adcolony": "2.0.0"
   }
 }

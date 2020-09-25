@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "JaSen",
-  "short_name": "JaSen",
-  "version": "com.arko.jasen",
-  "description": "A sample JaSen application that responds to the deviceready event.",
-  "author": "JaSen Team",
+  "name": "Nghe tieng nhat",
+  "short_name": "Nghe tieng nhat",
+  "version": "com.arko.nghetiengnhat",
+  "description": "Nghe tieng nhat qua 6000 cau",
+  "author": "Nghe tieng nhat",
   "icons": [],
   "start_url": "index.html"
 }

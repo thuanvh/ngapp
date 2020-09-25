@@ -74,10 +74,10 @@ export class HeroDetailComponent implements OnInit {
     audio.play();
   }
   playAudioMeaning(id):void{
-    this.playFile('https://thuanvh.github.io/j2ks/local/vi/meaning/' + id + ".mp3");
+    this.playFile('https://thuanvh.github.io/j2ks/local/vi/meaning/' + (id-1) + ".mp3");
   }
   playAudioSentence(id):void{
-    this.playFile('https://thuanvh.github.io/j2ks/local/vi/sentence/' + id + ".mp3");
+    this.playFile('https://thuanvh.github.io/j2ks/local/vi/sentence/' + (id-1) + ".mp3");
   }
   replacetext(value: string, args: {[key: string]: string}): string {
       
@@ -163,6 +163,8 @@ export class HeroDetailComponent implements OnInit {
           this.playAudio(this.selectedItem.content[12]);
         }else if(i==6){
           this.playAudioSentence(this.selectedItem.id);
+        }else{
+          this.playAudio(this.selectedItem.content[12]);
         }
         if (i>max)
           i=-1;

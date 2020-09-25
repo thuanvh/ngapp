@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.arko.jasen;
+package com.arko.nghetiengnhat;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

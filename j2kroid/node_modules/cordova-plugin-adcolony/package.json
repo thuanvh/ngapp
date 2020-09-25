@@ -1,0 +1,63 @@
+{
+  "_from": "cordova-plugin-adcolony",
+  "_id": "cordova-plugin-adcolony@3.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-gH9TiLgbs3IJqhnNjgnmolfawm7t6O1IzeyUaLDWkolSAlgTD8lXFQ2ZC8KiZsbDngtPMhuxaj3YizHDPz6LlQ==",
+  "_location": "/cordova-plugin-adcolony",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-adcolony",
+    "name": "cordova-plugin-adcolony",
+    "escapedName": "cordova-plugin-adcolony",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-adcolony/-/cordova-plugin-adcolony-3.0.0.tgz",
+  "_shasum": "8040e8b8776b0e2645115b38c16c3a354a46b3fc",
+  "_spec": "cordova-plugin-adcolony",
+  "_where": "D:\\sandbox\\bgremove\\abc\\ngapp\\j2kroid",
+  "author": {
+    "name": "notmedia"
+  },
+  "bugs": {
+    "url": "https://github.com/notmedia/cordova-plugin-adcolony/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-adcolony",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "AdColony plugin for Apache Cordova",
+  "homepage": "https://github.com/notmedia/cordova-plugin-adcolony#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "adcolony",
+    "ads",
+    "video",
+    "ad",
+    "plugin",
+    "ios",
+    "android",
+    "monetisation"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-adcolony",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notmedia/cordova-plugin-adcolony.git"
+  },
+  "version": "3.0.0"
+}

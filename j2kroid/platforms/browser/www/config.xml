@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arko.jasen" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>JaSen</name>
+<widget id="com.arko.nghetiengnhat" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Nghe tieng nhat</name>
     <description>
-        A sample JaSen application that responds to the deviceready event.
+        Nghe tieng nhat qua 6000 cau
     </description>
-    <author email="jasenapp@gmail.com" href="http://cordova.io">
-        JaSen Team
+    <author email="nghe6kapp@gmail.com" href="http://cordova.io">
+        Nghe tieng nhat
     </author>
     <content src="index.html" />
     <access origin="*" />
