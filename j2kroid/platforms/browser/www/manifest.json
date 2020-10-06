@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Nghe tieng nhat",
-  "short_name": "Nghe tieng nhat",
+  "name": "Nghe JP",
+  "short_name": "Nghe JP",
   "version": "com.arko.nghetiengnhat",
   "description": "Nghe tieng nhat qua 6000 cau",
   "author": "Nghe tieng nhat",

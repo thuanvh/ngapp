@@ -62,7 +62,7 @@
       "PACKAGE_NAME": "io.cordova.hellocordova"
     },
     "cordova-plugin-adcolony": {
-      "PACKAGE_NAME": "com.arko.jasen"
+      "PACKAGE_NAME": "com.arko.nghetiengnhat"
     }
   },
   "dependent_plugins": {},
